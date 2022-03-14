@@ -1,0 +1,27 @@
+header {
+  border-bottom: 1px solid #e9ec0d;
+  background-color: #7b4e86d0;
+}
+
+header .principal {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+header .logo span {
+  font-size: 3rem;
+  margin-left: 1rem;
+  font-weight: 700;
+}
+

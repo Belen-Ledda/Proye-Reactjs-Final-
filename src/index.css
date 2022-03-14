@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:'Roboto', 'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:'Roboto','Helvetica Neue';
+}
+
+:root {
+  --container-xl: 1280px;
+  --main-red: #7b4e86;
+  --border-gray: #e9ec0d;
+  --border-ligthgray: #cac398;
+  --bg-gray: #ebebeb;
+}
+
+button {
+  background-color: var(--main-red);
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
