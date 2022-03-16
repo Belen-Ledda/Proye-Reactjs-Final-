@@ -7,7 +7,7 @@ export default function ItemDetail({ item }) {
       <div className='derecha-column'>
         <div>
           <h1>{item.titulo}</h1>
-          <p className='precio'>USD {item.precio}</p>
+          <p className='precio'>$ {item.precio}</p>
           <p className='descripcion'>{item.descripcion}</p>
         </div>
         <button>Comprame</button>

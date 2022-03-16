@@ -18,9 +18,9 @@ export default function ItemListContainer({ greetings }) {
         });
         setItemsList(itemsPorCategoria);
       }
-    }).catch((error) => {
-      console.log(error);
-    });
+    })//.catch((error) => {
+      //console.log(error);
+    //});
 }, [categoryName]);
 function onAddItem(itemCount) {
     console.log(itemCount);

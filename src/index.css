@@ -24,7 +24,7 @@ code {
 }
 
 button {
-  background-color: var(--main-red);
+  background-color: #7b4e86;
   border: none;
   cursor: pointer;
   color: white;

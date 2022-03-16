@@ -29,7 +29,7 @@ const items = [
     descripcion: 'La casita de tus plantas',
     precio: 1,
     imagenUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpudY-o-UBs4MQnFkHz4X0x5zIpyVRew8hg&usqp=CAU',
-    categoria: 'accesorios',
+    categoria: 'macetas',
   }
 ]
 //Backend
