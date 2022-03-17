@@ -14,7 +14,7 @@ export default function ItemListContainer({ greetings }) {
         setItemsList(items);
       } else {
         const itemsPorCategoria = items.filter((producto) => {
-          return producto.category === categoryName;
+          return producto.categoria === categoryName;
         });
         setItemsList(itemsPorCategoria);
       }
@@ -33,7 +33,7 @@ return (
           <p>Cargando productos...</p> : 
           <ItemList items={itemsList} />
       }
-      <ItemCount stock={5} initial={1} onAdd={onAddItem} />
+
     </div>
   )
 }
