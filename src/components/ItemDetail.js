@@ -12,7 +12,7 @@ export default function ItemDetail({ item }) {
   const onAdd = (cantidad) => {
     console.log (cantidad);
     setShowButton(true);
-    addToCart(cantidad, item); 
+    addToCart(item, cantidad); 
 
   };
 
