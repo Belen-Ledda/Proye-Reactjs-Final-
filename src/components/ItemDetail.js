@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext'
+import ItemCount from './ItemCount';
+
 import './ItemDetail.css';
 
 export default function ItemDetail({ item }) {
   const [showButton, setShowButton] = useState (false);
+  const { addToCart, cart }=useContext(CartContext)
 
   const onAdd = (cantidad) => {
     console.log (cantidad);
     setShowButton(true);
+    addToCart(cantidad, item); 
 
   };
 
-
+console.log(cart)
 
   return (
     <div className='item'>

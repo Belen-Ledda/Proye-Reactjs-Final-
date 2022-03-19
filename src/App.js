@@ -3,6 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import CartContextProvider from './context/CartContext';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       </header>
       <main>
         <div className='principal'>
+        <CartContextProvider>
           <Routes>
             <Route path="/" element={<ItemListContainer greetings="Bienvenides a La tienda" />}/>
            {/*items filtrados por categoria */}
@@ -22,6 +25,7 @@ function App() {
             {/* página 404 */}
             <Route path="*" element={<div> <h2>Página no encontrada</h2> <Link to="/">{ '<< ' }Volver al incio </Link> </div>}/>
           </Routes>
+          </CartContextProvider>
         </div>
       </main>
     </div>
