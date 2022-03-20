@@ -23,6 +23,7 @@ function App() {
             <Route path="/category/:categoryName" element={<ItemListContainer greetings="Categoria en específico" />}/>
             {/* pantalla dinámica de los productos */}
             <Route path="/producto/:productId" element={<ItemDetailContainer />}/>
+             {/* carrito de compras */}
             <Route path="/Cart" element={<CartWidget/>} />
             {/* página 404 */}
             <Route path="*" element={<div> <h2>Página no encontrada</h2> <Link to="/">{ '<< ' }Volver al incio </Link> </div>}/>
