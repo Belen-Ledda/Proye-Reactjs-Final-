@@ -2,23 +2,16 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext'
 import ItemCount from './ItemCount';
-
-
-
 import './ItemDetail.css';
 
 export default function ItemDetail({ item }) {
   const [showButton, setShowButton] = useState (false);
-  const { addToCart, cart }=useContext(CartContext)
+  const { addToCart }=useContext(CartContext)
 
   const onAdd = (cantidad) => {
-    console.log (cantidad);
     setShowButton(true);
-    addToCart(item, cantidad); 
-
+    addToCart(item, cantidad);
   };
-
-console.log(cart)
 
   return (
     <div className='item'>
@@ -29,7 +22,7 @@ console.log(cart)
           <p className='precio'>$ {item.precio}</p>
           <p className='descripcion'>{item.descripcion}</p>
           {showButton ? (
-          <Link to="Cart">Ir al carrito</Link> 
+          <Link to="/cart">Ir al carrito</Link> 
         ): (
           <ItemCount stock= {item.stock} initial={0} onAdd={onAdd}/> 
         )}

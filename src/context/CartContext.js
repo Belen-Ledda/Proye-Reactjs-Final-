@@ -1,26 +1,47 @@
 import { createContext, useState} from "react";
 
-
-
-
-
-
 export const CartContext  = createContext([]);
 
 const CartContextProvider = ({children}) => {
-    const [cart,setCart] =useState ([]);
+    const [cart,setCart] = useState([]);
 
-//agregar items en el carrito
+    const isInCart = (id) => {
+        return cart.some(item => item.id == id);
+    }
+
+    const clear = () => {
+        console.log('Vaciando carrito...');
+        setCart([]);
+    }
+
+    //agregar items en el carrito
     const addToCart = (item, cantidad) =>{
-        console.log(cantidad, item);
-        setCart([...cart,{ ...item, cantidad }]);
+        console.log('Nuevo item: ', item.titulo, ' x ', cantidad);
+        if(isInCart(item.id)) {
+            console.log('Se repite, agregando al total...');
+            const cartCopy = [...cart]; 
+            const indexOfProduct = cartCopy.findIndex(product => product.id == item.id);
+            cartCopy[indexOfProduct].cantidad += cantidad;
+            setCart(cartCopy);
+        } else {
+            setCart([...cart,{ ...item, cantidad }]);
+            console.log('Se agrego ', item.titulo, ' exitosamente');
+        }
     };
-    console.log(cart);
-        return (
-        <CartContext.Provider value={{cart, addToCart}}>
+    
+
+//eliminar por items 
+
+const deleteItem = (id) => {
+setCart(cart.filter((item)=>item.id !== id));
+}
+
+
+    return (
+        <CartContext.Provider value={{ cart, addToCart, clear, deleteItem }}>
             {children}
         </CartContext.Provider>
-        );
+    );
 };
 
 

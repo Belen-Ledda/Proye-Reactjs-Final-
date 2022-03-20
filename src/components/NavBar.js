@@ -10,7 +10,7 @@ export default function Menu() {
       <li><NavLink to="/category/plantas">Plantas</NavLink></li>
       <li><NavLink to="/category/tierra">Tierra</NavLink></li>
       <li><NavLink to="/category/macetas">Macetas</NavLink></li>
-      <li><a href="#"><CartWidget /></a></li>
+      <li><a href="/Cart"><CartWidget /></a></li>
     </ul>
   );
 };
