@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import './Cart.css';
 
 const Cart = () => {
     const { cart, clear, deleteItem  } = useContext(CartContext);
@@ -31,18 +32,19 @@ const Cart = () => {
                         <td>
                             <img src={item.imagenUrl} alt="producto" />
                         </td>
-                        <td>{item.descripcion}</td>
-                        <td>{item.precio}</td>
+                        <td>{item.titulo}</td>
                         <td>{item.cantidad}</td>
-                        <td>{item.precio * item.cantidad}</td>
+                        <td>${item.precio}</td>
+                        <td>${item.precio * item.cantidad}</td>
                         <td>
-                            <button onClick={() => deleteItem(item.id)}>X</button>
+                            <button className='add-to-cart-button' onClick={() => deleteItem(item.id)}>ELIMINAR ITEM</button>
                         </td>
                         </tr>
                     ))}
-                    </tbody>
+            </tbody>
                 </table>
-            <button onClick= {clear}>Vaciar Carrito</button>
+            <button className='add-to-cart-button' onClick= {clear}>Vaciar Carrito</button>
+            <button >TERMINAR MI COMPRA</button>
                 </>
             )}
         </>

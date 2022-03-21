@@ -1,0 +1,21 @@
+table {
+    width:50rem;
+    border: 1px solid #e9ec0d;
+}
+th, td {
+    width: 2rem;
+    border: 1px solid #7b4e86d0;
+    padding: 0.3em;
+    text-align: center;
+}
+
+
+
+
+  
+  .add-to-cart-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 800;
+  };
+
