@@ -17,11 +17,11 @@ function App() {
         <div className='principal'>
           <Routes>
             <Route path="/" element={<ItemListContainer greetings="Bienvenides a La tienda" />}/>
-           {/*items filtrados por categoria */}
+          {/*items filtrados por categoria */}
             <Route path="/category/:categoryName" element={<ItemListContainer greetings="Categoria en específico" />}/>
             {/* pantalla dinámica de los productos */}
             <Route path="/producto/:productId" element={<ItemDetailContainer />}/>
-             {/* carrito de compras */}
+            {/* carrito de compras */}
             <Route path="/cart" element={<Cart/>} />
             {/* página 404 */}
             <Route path="*" element={<div> <h2>Página no encontrada</h2> <Link to="/">{ '<< ' }Volver al incio </Link> </div>}/>
